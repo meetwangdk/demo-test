@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: springboot-template
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 10
+
+server:
+  port: 9090
+  servlet:
+    context-path: /api
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.example.template.entity
